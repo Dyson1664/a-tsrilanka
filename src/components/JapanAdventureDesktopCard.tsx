@@ -26,14 +26,16 @@ type JapanAdventureDesktopCardProps = {
   priceLabel?: string;
   ctaLabel?: string;
   tripSlug?: string;
+  priceNote?: string;
 };
 
 export default function JapanAdventureDesktopCard({
   leftMediaVideoSrc,
   title = "Best of Japan",
-  priceLabel = "USD $2,495",
+  priceLabel = "USD $2,395",
   ctaLabel = "Reserve Now",
   tripSlug = "japan",
+  priceNote = "First 6 bookings, then USD $2,495",
 }: JapanAdventureDesktopCardProps) {
   const bookingUrl = tripSlug ? `/#/booking/${tripSlug}` : "#";
 
@@ -78,6 +80,9 @@ export default function JapanAdventureDesktopCard({
             <p className="text-lg text-slate-700">
               From <span className="text-3xl font-extrabold text-slate-900 lg:text-4xl">{priceLabel}</span>
             </p>
+            {priceNote && (
+              <p className="mt-1 text-xs text-slate-500">{priceNote}</p>
+            )}
             <a href={bookingUrl} className="inline-flex">
               <button
                 type="button"

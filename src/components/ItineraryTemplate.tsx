@@ -90,6 +90,7 @@ interface CountryData {
   duration: string;
   heroImage: string;
   price?: string;
+  priceNote?: string;
   startDate?: string;
   overviewGallery?: string[];
   overviewGallery2x?: (string | null)[]; // <-- new optional gallery for hero left grid
@@ -1175,6 +1176,9 @@ const StickyBookingCard = memo(({ data }: { data: CountryData }) => {
           <div className="space-y-1">
             <p className="text-sm text-muted-foreground">From</p>
             <p className="text-3xl font-bold text-foreground">{data.price || "USD $1,399"}</p>
+            {data.priceNote && (
+              <p className="text-xs text-muted-foreground">{data.priceNote}</p>
+            )}
           </div>
 
           {bookingUrl === "#" ? (
@@ -1537,6 +1541,9 @@ export const ItineraryTemplate = memo(
       <span className="text-2xl font-bold text-foreground">
         {data.price || "USD $1,399"}
       </span>
+      {data.priceNote && (
+        <span className="text-xs text-muted-foreground">{data.priceNote}</span>
+      )}
     </div>
 
     {(() => {
