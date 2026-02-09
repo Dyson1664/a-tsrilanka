@@ -1,6 +1,5 @@
-import { useState, useCallback, memo } from "react";
+import { memo } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import ibtLogo from "@/assets/ibt-logo.svg";
 
@@ -9,12 +8,6 @@ interface NavbarProps {
 }
 
 const Navbar = memo(({ logoStyle }: NavbarProps = {}) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen((prev) => !prev);
-  }, []);
-
   return (
     <nav className="bg-white text-gray-900 border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -44,25 +37,13 @@ const Navbar = memo(({ logoStyle }: NavbarProps = {}) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ml-auto mr-12" />
 
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleMobileMenu}
-              className="text-foreground"
-            >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {/* Mobile menu button (disabled until there are mobile links to show) */}
+          {/* <div className="md:hidden ml-auto">
+            <Button variant="ghost" size="sm" className="text-foreground">
+              <Menu className="w-5 h-5" />
             </Button>
-          </div>
+          </div> */}
         </div>
-
-        {/* Mobile Navigation Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-background">
-            <div className="px-2 pt-2 pb-3 space-y-1" />
-          </div>
-        )}
       </div>
     </nav>
   );
