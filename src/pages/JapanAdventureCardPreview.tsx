@@ -10,6 +10,7 @@ export default function JapanAdventureCardPreview() {
         title={japanData.title}
         priceLabel={japanData.price}
         ctaLabel={japanData.ctaLabel}
+        tripSlug={japanData.slug}
       />
     </div>
   );

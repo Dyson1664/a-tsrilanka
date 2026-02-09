@@ -25,6 +25,7 @@ type JapanAdventureDesktopCardProps = {
   title?: string;
   priceLabel?: string;
   ctaLabel?: string;
+  tripSlug?: string;
 };
 
 export default function JapanAdventureDesktopCard({
@@ -32,7 +33,10 @@ export default function JapanAdventureDesktopCard({
   title = "Best of Japan",
   priceLabel = "USD $2,495",
   ctaLabel = "Reserve Now",
+  tripSlug = "japan",
 }: JapanAdventureDesktopCardProps) {
+  const bookingUrl = tripSlug ? `/#/booking/${tripSlug}` : "#";
+
   return (
     <section className="w-full px-5 py-5">
       <div className="mx-auto w-full max-w-[1420px] md:w-[94%] lg:w-[92%] xl:w-[90%] md:px-6 lg:px-12">
@@ -74,12 +78,14 @@ export default function JapanAdventureDesktopCard({
             <p className="text-lg text-slate-700">
               From <span className="text-3xl font-extrabold text-slate-900 lg:text-4xl">{priceLabel}</span>
             </p>
-            <button
-              type="button"
-              className="mt-2 rounded-full bg-[#0fc2bf] px-5 py-2 text-base font-bold text-white transition hover:brightness-95"
-            >
-              {ctaLabel}
-            </button>
+            <a href={bookingUrl} className="inline-flex">
+              <button
+                type="button"
+                className="mt-2 rounded-full bg-[#0fc2bf] px-5 py-2 text-base font-bold text-white transition hover:brightness-95"
+              >
+                {ctaLabel}
+              </button>
+            </a>
           </div>
         </div>
       </div>

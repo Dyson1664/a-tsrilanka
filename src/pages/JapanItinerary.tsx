@@ -13,6 +13,7 @@ const JapanItinerary = () => {
             title={japanData.title}
             priceLabel={japanData.price}
             ctaLabel={japanData.ctaLabel}
+            tripSlug={japanData.slug}
           />
         </div>
       }
