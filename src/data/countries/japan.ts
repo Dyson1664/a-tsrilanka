@@ -36,7 +36,7 @@ const japanOverview = {
   tags: [],
   subtitle: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
   location: "Japan",
-  duration: "7 days",
+  duration: "8 days",
   heroImage: japanHero3,
   price: "USD $1,959",
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
@@ -157,16 +157,26 @@ export const japanData = {
     },
     {
       day: 3,
-      title: "Explore Tokyo",
+      title: "Tokyo | Shrines, Fashion & Nightlife",
       location: "Tokyo, Japan",
       heroImage: japanDay03,
       description:
-        "Begin with a peaceful visit to Meiji-jingū Shrine, then dive into the color and energy of Harajuku’s Takeshita-dōri. Enjoy a free afternoon to explore cafés, vintage shops, or Omotesandō, before dinner and a night out in Shinjuku’s legendary Golden Gai.",
+        "Start at Meiji-jingū Shrine for a calm morning before diving into Harajuku’s Takeshita-dōri. Spend the afternoon exploring Omotesandō and nearby cafés, then wrap up with dinner and a night out in Shinjuku’s Golden Gai.",
       accommodation: { name: "The Knot Tokyo Shinjuku" },
-      highlights: "Meiji-jingū, Harajuku Takeshita-dōri, Golden Gai nightlife",
+      highlights: "Meiji-jingū Shrine, Harajuku, Omotesandō, Golden Gai nightlife",
     },
     {
       day: 4,
+      title: "Tokyo | Shrines, Fashion & Nightlife",
+      location: "Tokyo, Japan",
+      heroImage: japanDay03,
+      description:
+        "Enjoy more time in Tokyo for shopping, street style, and nightlife. Explore Shibuya and Shinjuku at your own pace, with optional cafés, vintage shops, or rooftop viewpoints before a final Tokyo evening.",
+      accommodation: { name: "The Knot Tokyo Shinjuku" },
+      highlights: "Shibuya Crossing, Shinjuku, Tokyo nightlife",
+    },
+    {
+      day: 5,
       // Title = keep your existing one (“GOOD”)
       title: "Mt. Fuji Day (Hakone Loop) → Kyoto",
       location: "Kyoto, Japan",
@@ -178,7 +188,7 @@ export const japanData = {
       highlights: "Hakone loop, Lake Ashi cruise, Owakudani ropeway, Mt Fuji views",
     },
     {
-      day: 5,
+      day: 6,
       title: "Exploring Classics of Kyoto",
       location: "Kyoto, Japan",
       heroImage: japantea,
@@ -189,7 +199,7 @@ export const japanData = {
       highlights: "Tea ceremony (kimonos included), Kiyomizudera",
     },
     {
-      day: 6,
+      day: 7,
       title: "Kyoto — Adventure & Activities",
       location: "Kyoto & Nara, Japan",
       heroImage: japansword,
@@ -200,7 +210,7 @@ export const japanData = {
       highlights: "Samurai class, Nara Park, Tōdai-ji Great Buddha",
     },
     {
-      day: 7,
+      day: 8,
       title: "Sayōnara (check out)",
       location: "Kyoto, Japan",
       heroImage: japanDay07,
@@ -210,7 +220,7 @@ export const japanData = {
     },
   ],
   summary: {
-    duration: "7 Days",
+    duration: "8 Days",
     activities: "18 Experiences",
     areas: "2 Cities",
     type: "Culture & Nature",
