@@ -191,18 +191,18 @@ export const DayLayout = memo(({
       )}
 
       {/* Transportation Section */}
-      {transportation && (
-        <div className="px-4 pb-10 md:px-10 bg-background">
-          <h4 className="text-lg font-semibold text-foreground mb-4">Transportation</h4>
-          <div className="space-y-4">
-            {/* Transportation Icons */}
-            <div className="flex justify-center gap-4 mb-6">
-              <Car className="w-8 h-8 text-primary" />
-              <Ship className="w-8 h-8 text-muted-foreground/40" />
-              <Bus className="w-8 h-8 text-muted-foreground/40" />
-              <Train className="w-8 h-8 text-muted-foreground/40" />
-              <Plane className="w-8 h-8 text-muted-foreground/40" />
-            </div>
+        {transportation && (
+          <div className="px-4 pb-10 md:px-10 bg-background">
+            <h4 className="text-lg font-semibold text-foreground mb-4">Transportation</h4>
+            <div className="space-y-4">
+              {/* Transportation Icons (Train is highlighted) */}
+              <div className="flex justify-center gap-4 mb-6">
+                <Car className="w-8 h-8 text-muted-foreground/40" />
+                <Ship className="w-8 h-8 text-muted-foreground/40" />
+                <Bus className="w-8 h-8 text-muted-foreground/40" />
+                <Train className="w-8 h-8 text-primary" />
+                <Plane className="w-8 h-8 text-muted-foreground/40" />
+              </div>
             
             {/* Route Line */}
             <div className="flex flex-col md:flex-row items-center justify-center relative max-w-sm mx-auto">

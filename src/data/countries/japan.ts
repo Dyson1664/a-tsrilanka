@@ -172,9 +172,11 @@ export const japanData = {
       accommodation: { name: "The Knot Tokyo Shinjuku" },
       highlights: "Dinner and free flow drinks,",
       transportation: {
+          mode: "Train",
         from: "Narita/Haneda Airport",
         to: "The Knot Tokyo",
         duration: "≈ 60 Minutes by train",
+
       },
     },
     {
