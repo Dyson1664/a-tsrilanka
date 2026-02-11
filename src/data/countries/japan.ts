@@ -218,7 +218,7 @@ export const japanData = {
         "Begin with a peaceful walk through Fushimi Inari Taisha, passing beneath the glowing orange torii gates of the Senbon Torii. Then enjoy a traditional tea ceremony, where you’ll be dressed in kimonos and welcome to keep them on for the rest of the day, perfect for memorable photos. In the afternoon, explore the atmospheric streets around Kiyomizudera and the historic Gion district.",
       meals: "Light breakfast",
       accommodation: { name: "Prince Smart Inn Shijo Omiya" },
-      highlights: "Tea ceremony (kimonos included), Kiyomizudera",
+      highlights: "Tea ceremony (kimonos included), Kiyomizudera, Fushimi Inari Taisha (Toti Gates)",
     },
     {
       day: 6,

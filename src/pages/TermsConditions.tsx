@@ -138,7 +138,7 @@ const TERMS_SECTIONS = [
   {
     title: "15. Governing Law & Jurisdiction",
     content: [
-      "These Terms & Conditions are governed by the laws of the State of Texas, USA.",
+      "These Terms & Conditions are governed by the laws of the State of Colorado, USA.",
       "Any disputes shall be subject to the exclusive jurisdiction of Texas courts.",
     ],
   },
