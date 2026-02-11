@@ -181,7 +181,7 @@ export const japanData = {
     },
     {
       day: 2,
-      title: "Tokyo walking tour",
+      title: "Walking Tour and Sake Tasting",
       location: "Tokyo",
       heroImage: texasday2,
       description:
@@ -211,7 +211,7 @@ export const japanData = {
     },
     {
       day: 5,
-      title: "Exploring Classics of Kyoto",
+      title: "Tea Ceremony and Exploring Kyoto",
       location: "Kyoto",
       heroImage: texas2,
       description:
