@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import JapanAdventureDesktopCard from "@/components/JapanAdventureDesktopCard";
 import { ItineraryTemplate } from "@/components/ItineraryTemplate";
 import { japanData } from "@/data/countries/japan";
 
 const JapanItinerary = () => {
+  // 🔽 Scroll to top when this page loads
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
   return (
     <ItineraryTemplate
       data={japanData}

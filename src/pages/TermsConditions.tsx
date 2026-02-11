@@ -27,30 +27,29 @@ const TERMS_SECTIONS = [
       "All participants must be 18 years of age or older at the time of booking.",
     ],
   },
+
   {
-    title: "3. Transfers & Name Changes",
-    content: [
-      "Bookings may be transferred to another person for the same tour date only, subject to written notice and approval.",
-      "The replacement traveler must meet all tour requirements and accept these Terms.",
-      "Full payment must be received no later than 90 days prior to departure.",
-      "Any supplier-imposed fees, fare differences, or administrative costs apply.",
-      "A booking transfer fee of $75 USD per person applies.",
-      "IBT reserves the right to refuse transfers where deadlines or supplier rules are not met.",
-      "All deposits and balance payments remain non-refundable. A transfer does not create any refund entitlement.",
-    ],
-  },
+  title: "3. Cancellations & Refunds",
+  content: [
+    "All deposits and balance payments are strictly non-refundable regardless of the timing or reason for cancellation by the traveler.",
+    "No refunds for late arrival, early departure, missed services, flight disruptions, illness, personal circumstances, weather, or change of mind.",
+    "Non-recoverable costs may include accommodation deposits, internal flights, transport, guides, permits, and third-party services.",
+    <>
+  <span className="font-semibold text-foreground block">
+    Imagine Beyond Travel cancellations:
+  </span>
+  <span className="block">
+    If Imagine Beyond Travel cancels the trip for any reason, you will receive a
+    100% refund of all amounts paid directly to Imagine Beyond Travel.
+  </span>
+</>
+,
+    "Tours are subject to minimum participant numbers and may be cancelled if minimums are not met.",
+  ],
+}
+,
   {
-    title: "4. Cancellations & Refunds",
-    content: [
-      "All deposits and balance payments are strictly non-refundable regardless of the timing or reason for cancellation by the traveler.",
-      "No refunds for late arrival, early departure, missed services, flight disruptions, illness, personal circumstances, weather, or change of mind.",
-      "Non-recoverable costs may include accommodation deposits, internal flights, transport, guides, permits, and third-party services.",
-      "Imagine Beyond Travel cancellations: If Imagine Beyond Travel cancels the trip for any reason, you will receive a 100% refund of all amounts paid directly to Imagine Beyond Travel.",
-      "Tours are subject to minimum participant numbers and may be cancelled if minimums are not met.",
-    ],
-  },
-  {
-    title: "5. Chargebacks & Payment Disputes",
+    title: "4. Chargebacks & Payment Disputes",
     content: [
       "Customers agree to contact IBT directly before initiating a chargeback or payment dispute.",
       "Initiating a chargeback after accepting these Terms may be considered a breach of contract.",
@@ -59,7 +58,7 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "6. Travel & Medical Insurance (Mandatory)",
+    title: "5. Travel & Medical Insurance (Mandatory)",
     content: [
       "Adequate travel insurance is mandatory and must cover medical expenses, emergency evacuation, repatriation, trip cancellation, interruption, and personal liability.",
       "Participants are responsible for ensuring they are medically and physically fit to travel.",
@@ -67,7 +66,7 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "7. Health, Fitness & Medical Disclosure",
+    title: "6. Health, Fitness & Medical Disclosure",
     content: [
       "Participants must disclose any medical condition, disability, pregnancy, allergy, or injury prior to departure.",
       "IBT may require medical clearance or restrict participation for safety reasons.",
@@ -76,7 +75,7 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "8. Passports, Visas & Entry Requirements",
+    title: "7. Passports, Visas & Entry Requirements",
     content: [
       "Participants are responsible for complying with all passport, visa, vaccination, and entry requirements.",
       "Passports must generally be valid for at least six (6) months beyond tour end date.",
@@ -85,7 +84,7 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "9. Airfare & Transportation",
+    title: "8. Airfare & Transportation",
     content: [
       "International flights are not included unless explicitly stated.",
       "IBT is not responsible for airline delays, cancellations, missed connections, or lost baggage.",
@@ -93,7 +92,7 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "10. Itinerary Changes",
+    title: "9. Itinerary Changes",
     content: [
       "IBT reserves the right to modify itineraries, accommodations, transport, or activities due to operational, safety, weather, or supplier reasons.",
       "Unused services are non-refundable.",
@@ -101,7 +100,7 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "11. Assumption of Risk & Liability",
+    title: "10. Assumption of Risk & Liability",
     content: [
       "Group travel involves inherent risks including illness, accidents, political instability, weather events, and limited medical facilities.",
       "Participation is voluntary and at your own risk.",
@@ -109,14 +108,14 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "12. Participant Conduct",
+    title: "11. Participant Conduct",
     content: [
       "IBT reserves the right to remove any participant for unsafe, disruptive, abusive, illegal, or inappropriate behavior without refund.",
       "Removal for conduct reasons does not qualify for any refund.",
     ],
   },
   {
-    title: "13. Force Majeure & Extraordinary Events",
+    title: "12. Force Majeure & Extraordinary Events",
     content: [
       "IBT is not liable for delays, changes, or cancellations caused by events beyond its control including natural disasters, pandemics, government actions, civil unrest, supplier failure, or transportation disruptions.",
       "IBT may modify, suspend, shorten, or cancel tours where required for safety, operational, legal, or force majeure reasons, or where minimum participation requirements are not met.",
@@ -124,27 +123,27 @@ const TERMS_SECTIONS = [
     ],
   },
   {
-    title: "14. Images & Marketing",
+    title: "13. Images & Marketing",
     content: [
       "By participating in an IBT tour, you grant a perpetual, worldwide, royalty-free license for use of photos or videos featuring your likeness for marketing purposes.",
     ],
   },
   {
-    title: "15. Complaints",
+    title: "14. Complaints",
     content: [
       "Issues must be raised immediately with the group leader during the tour.",
       "Written complaints must be submitted within 30 days of tour completion.",
     ],
   },
   {
-    title: "16. Governing Law & Jurisdiction",
+    title: "15. Governing Law & Jurisdiction",
     content: [
       "These Terms & Conditions are governed by the laws of the State of Texas, USA.",
       "Any disputes shall be subject to the exclusive jurisdiction of Texas courts.",
     ],
   },
   {
-    title: "17. Privacy & Communications",
+    title: "16. Privacy & Communications",
     content: [
       "By booking, you consent to receive transactional communications related to your booking and acknowledge IBT’s Privacy Policy.",
     ],
