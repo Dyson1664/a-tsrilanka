@@ -1195,7 +1195,7 @@ const StickyBookingCard = memo(({ data }: { data: CountryData }) => {
                 size="default"
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold"
               >
-                RESERVE NOW
+                RESERVE NOW $800
               </Button>
             </a>
           )}
