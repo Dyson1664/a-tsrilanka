@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { CalendarIcon, Clock, MapPin } from "lucide-react";
 
 import japanDay01Group from "@/assets/japan-day01-groupbb.jpg";
 import japanDay03Group from "@/assets/japan-day03-group.jpg";
@@ -31,7 +31,11 @@ const tags: Tag[] = [
   { emoji: "🧳", label: "Solo" },
 ];
 
-const details = [{ icon: MapPin, label: "Tokyo - Mt Fuji - Kyoto", underlined: true }];
+const details = [
+  { icon: MapPin, label: "Tokyo - Mt Fuji - Kyoto", underlined: true },
+  { icon: Clock, label: "May 10th 2027", underlined: false },
+  { icon: CalendarIcon, label: "8 Days", underlined: false },
+];
 
 type JapanAdventureDesktopCardProps = {
   leftMediaVideoSrc?: string;

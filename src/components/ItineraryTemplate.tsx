@@ -1,6 +1,6 @@
 import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
-import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin, Star, X, Calendar } from "lucide-react";
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin, Star, X, Calendar, Clock } from "lucide-react";
 import { CategoryTags, CategoryTag } from "@/components/CategoryTags";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -961,9 +961,17 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           <div className="order-1 md:order-none space-y-6 w-full">
             {/* Trip duration and name - stacked layout */}
             <div className="flex flex-col gap-1 mb-4">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-primary" />
-                <span className="text-lg font-medium text-foreground">{data.duration}</span>
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-primary" />
+                  <span className="text-lg font-medium text-foreground">{data.duration}</span>
+                </div>
+                {data.startDate && (
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-primary" />
+                    <span className="text-lg font-medium text-foreground">{data.startDate}</span>
+                  </div>
+                )}
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold text-primary">{data.title}</h2>
             </div>
@@ -1166,7 +1174,7 @@ const StickyBookingCard = memo(({ data }: { data: CountryData }) => {
           <div className="space-y-2">
             <h3 className="text-xl font-bold text-foreground">{data.duration}</h3>
             {data.startDate && (
-              <p className="font-playfair text-lg text-primary mb-1">Trip starts {data.startDate}</p>
+              <p className="text-lg font-normal text-primary mb-1">Trip starts {data.startDate}</p>
             )}
             <p className="text-sm text-muted-foreground">
               {data.route ? data.route.join(" to ") : data.location}
@@ -1200,9 +1208,7 @@ const StickyBookingCard = memo(({ data }: { data: CountryData }) => {
             </a>
           )}
 
-          <p className="text-xs text-center text-muted-foreground leading-relaxed">
-            Reserve for $650 - deducted from total fees. Non-refundable.
-          </p>
+
         </div>
       </div>
     </div>
