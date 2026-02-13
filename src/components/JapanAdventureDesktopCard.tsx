@@ -33,7 +33,7 @@ const tags: Tag[] = [
 
 const details = [
   { icon: MapPin, label: "Tokyo - Mt Fuji - Kyoto", underlined: true },
-  { icon: Clock, label: "May 10th 2027", underlined: false },
+  { icon: Clock, label: "May 16th 2027", underlined: false },
   { icon: CalendarIcon, label: "8 Days", underlined: false },
 ];
 

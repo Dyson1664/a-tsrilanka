@@ -74,7 +74,7 @@ const japanOverview = {
   duration: "8 days",
   heroImage: texas5,
   price: "$2,395",
-  startDate: "May 10th 2027",
+  startDate: "May 16th 2027",
   priceNote: "First 6 bookings, then $2,495",
   ctaLabel: "Reserve Now $650",
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
@@ -159,7 +159,7 @@ export const japanData = {
     // --- JAPAN: Days 1–4 (paste over your existing day 1–4 objects) ---
     {
       day: 1,
-      date: "May 10th 2027",
+      date: "May 16th 2027",
       title: "Tokyo Arrival & Welcome Dinner",
       location: "Tokyo",
       heroImage: texasday1,
@@ -178,7 +178,7 @@ export const japanData = {
     },
     {
       day: 2,
-      date: "May 11th 2027",
+      date: "May 17th 2027",
       title: "Walking Tour and Sake Tasting",
       location: "Tokyo",
       heroImage: texasday2,
@@ -189,7 +189,7 @@ export const japanData = {
     },
     {
       day: 3,
-      date: "May 12th 2027",
+      date: "May 18th 2027",
       title: "Explore Tokyo",
       location: "Tokyo",
       heroImage: texasday3,
@@ -200,7 +200,7 @@ export const japanData = {
     },
     {
       day: 4,
-      date: "May 13th 2027",
+      date: "May 19th 2027",
       title: "Mt. Fuji Day (Hakone Loop) → Kyoto",
       location: "Tokyo → Kyoto",
       heroImage: japanHero,
@@ -211,7 +211,7 @@ export const japanData = {
     },
     {
       day: 5,
-      date: "May 14th 2027",
+      date: "May 20th 2027",
       title: "Tea Ceremony and Exploring Kyoto",
       location: "Kyoto",
       heroImage: texas2,
@@ -223,7 +223,7 @@ export const japanData = {
     },
     {
       day: 6,
-      date: "May 15th 2027",
+      date: "May 21st 2027",
       title: "Nara Park",
       location: "Kyoto",
       heroImage: texasday,
@@ -235,7 +235,7 @@ export const japanData = {
     },
     {
       day: 7,
-      date: "May 16th 2027",
+      date: "May 22nd 2027",
       title: "Kyoto — Free Day",
       location: "Kyoto",
       heroImage: texas7,
@@ -247,7 +247,7 @@ export const japanData = {
     },
     {
       day: 8,
-      date: "May 17th 2027",
+      date: "May 23rd 2027",
       title: "Sayōnara (check out)",
       location: "Kyoto",
       heroImage: texas4,
