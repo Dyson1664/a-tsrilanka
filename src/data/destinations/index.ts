@@ -1,15 +1,13 @@
 // Import all destination hero images
-import japanHeroImage from "@/assets/japan-hero.jpg";
 import indiaHeroImage from "@/assets/india-hero.jpg";
 import bhutanHeroImage from "@/assets/bhutan-hero.jpg";
 import colombiaHeroImage from "@/assets/colombia/colombia-hero.jpg";
 import vietnamHeroImage from "@/assets/vietnam-hero.jpg";
 import thailandHeroImage from "@/assets/thailand-hero.jpg";
-import srilankaHeroImage from "@/assets/srilanka-hero.jpg";
+import srilankaHeroImage from "@/assets/sri-lanka/srilanka-hero.jpg";
 import philippinesHeroImage from "@/assets/philippines-hero.jpg";
 
 // Import country-specific itinerary data
-import { japanData } from "@/data/countries/japan";
 import { thailandData } from "@/data/countries/thailand";
 import { philippinesData } from "@/data/countries/philippines";
 import { srilankaData } from "@/data/countries/srilanka";
@@ -20,24 +18,6 @@ import { DestinationData, ItineraryData } from "@/data/types";
 export type { Trip, DestinationData, ItineraryData } from "@/data/types";
 
 export const destinationsData: Record<string, DestinationData> = {
-  japan: {
-    country: "Japan",
-    heroImage: japanHeroImage,
-    heroSubtitle: "Experience the fascinating blend of ancient traditions and modern innovation",
-    trips: [
-      {
-        id: "japan-journey",
-        slug: "japan",
-        title: "Best of Japan",
-        duration: "10 days",
-        description: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
-        image: japanHeroImage,
-        price: "From $2,395 (first 6), then $2,495",
-        route: "/japan-itinerary"
-      }
-    ],
-    itinerary: japanData
-  },
   india: {
     country: "India",
     heroImage: indiaHeroImage,

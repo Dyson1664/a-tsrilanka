@@ -2,12 +2,11 @@
 
 // Import existing images
 import thailandHero from "@/assets/thailand-hero.jpg";
-import japanHero from "@/assets/japan-hero.jpg";
-import srilankaHero from "@/assets/srilanka-hero.jpg";
+import srilankaHero from "@/assets/sri-lanka/srilanka-hero.jpg";
 import philippinesHero from "@/assets/philippines-hero.jpg";
 import colombiaHero from "@/assets/colombia/colombia-hero.jpg";
 import indiaHero from "@/assets/india-hero.jpg";
-import srilankaDay06 from "@/assets/srilanka-day05-ella-bridge.jpg";
+import srilankaDay06 from "@/assets/sri-lanka/srilanka-day05-ella-bridge.jpg";
 
 
 import indiaDay13 from "@/assets/india-day13-main-taj-mahal.jpg";
@@ -54,21 +53,7 @@ export interface Feature {
 }
 
 export const FEATURED_TOURS: readonly FeaturedTour[] = [
-  {
-    id: 1,
-    slug: "japan",
-    title: "Best of Japan",
-    location: "Tokyo, Japan",
-    duration: "7 days",
-    rating: 4.9,
-    reviews: 142,
-    price: "From $2,395 (first 6), then $2,495",
-    image: japanHero,
-    tag: "",
-    overview:
-      "Neon cities to Zen temples—Tokyo to Kyoto by bullet train, sushi, and shrines."
-  },
-  {
+{
     id: 2,
     slug: "india-journey",
     image: indiaDay13,
@@ -78,7 +63,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     price: "from $1,529",
     rating: 4.9,
     reviews: 89,
-    tag: "RESERVE NOW",
+    tag: "RESERVE NOW $300",
     overview:
       "Handpicked highlights: Delhi, Jodhpur, Udaipur, Pushkar, Jaipur, Agra."
   },
@@ -103,7 +88,6 @@ export const DESTINATIONS: readonly Destination[] = [
   { name: "India",       image: indiaHero,       route: "/india-itinerary" },
   { name: "Sri Lanka",   image: srilankaHero,    route: "/srilanka-itinerary" },
   { name: "Philippines", image: philippinesHero, route: "/philippines-itinerary" },
-  { name: "Japan",       image: japanHero,       route: "/japan-itinerary" },
   { name: "Thailand",    image: thailandHero,    comingSoon: true },
   { name: "Colombia",    image: colombiaHero,    comingSoon: true },
   { name: "Bhutan",      image: bhutanHero,      comingSoon: true },
@@ -160,7 +144,7 @@ export const FEATURES: readonly Feature[] = [
 
 // Tour route mappings for efficient lookups
 export const TOUR_ROUTES: Record<number, string> = {
-  1: "/japan-itinerary",
-  2: "/india-itinerary", 
-  3: "/srilanka-itinerary"
+  1: "/india-itinerary", 
+  2: "/srilanka-itinerary"
 } as const;
+

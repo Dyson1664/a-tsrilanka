@@ -85,6 +85,8 @@ interface CountryData {
   id: string;
   slug?: string;
   title: string;
+  aboutTitle?: string;
+  hideTagsOnDesktop?: boolean;
   subtitle: string;
   location: string;
   duration: string;
@@ -311,6 +313,10 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
 
   const highlights =
     data.highlights && data.highlights.length > 0 ? data.highlights : defaultHighlights;
+  const desktopHighlights =
+    data.slug === "sri-lanka"
+      ? highlights.filter((highlight) => highlight.title !== "Hill Country Train")
+      : highlights;
 
   return (
     <div>
@@ -333,7 +339,7 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
           </div>
 
           <CarouselContent>
-            {highlights.map((highlight, index) => {
+            {desktopHighlights.map((highlight, index) => {
               const isPlaying = activeVideo === index;
 
               return (
@@ -950,7 +956,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
       >
         {/* Category Tags - centered at top */}
         {data.tags && data.tags.length > 0 && (
-          <div className="mb-6">
+          <div className={`mb-6${data.hideTagsOnDesktop ? " md:hidden" : ""}`}>
             <CategoryTags tags={data.tags} />
           </div>
         )}
@@ -973,7 +979,9 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
                   </div>
                 )}
               </div>
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary">{data.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-primary">
+                {data.aboutTitle ?? data.title}
+              </h2>
             </div>
 
             {data.aboutDescription.map((paragraph, index) => (
@@ -1203,7 +1211,7 @@ const StickyBookingCard = memo(({ data }: { data: CountryData }) => {
                 size="default"
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold"
               >
-                RESERVE NOW $650
+                RESERVE NOW $300
               </Button>
             </a>
           )}
@@ -1526,7 +1534,9 @@ export const ItineraryTemplate = memo(
               </div>
 
               {/* Where We Stay Section */}
+              {/*
               <WhereWeStay data={data} />
+              */}
 
               {/* What's Included Section */}
               <IncludedSection included={data.included} countryName={countryName} />
@@ -1576,7 +1586,7 @@ export const ItineraryTemplate = memo(
             size="default"
             className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold px-6"
           >
-            RESERVE NOW $650
+            RESERVE NOW $300
           </Button>
         </a>
       );

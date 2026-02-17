@@ -21,11 +21,11 @@ import parisSeine from "@/assets/paris-seine.jpg";
 // Hero media assets
 import heroVideo from "@/assets/philippines/el-nido.mp4";
 import heroVideoPoster from "@/assets/philippines/elnido-cover.jpeg";
-import heroImg1 from "@/assets/japan-day03-group.jpg";
+import heroImg1 from "@/assets/sri-lanka/srilanka-day01.jpg";
 import heroImg2 from "@/assets/philippines-day05-wonderland.jpg";
 import heroImg3 from "@/assets/srilanka-day11-main-goodbye-group-photo.jpg";
 import heroImg4 from "@/assets/india-day01-gallery-01.jpg";
-import heroImg5 from "@/assets/japan-last-day.jpg";
+import heroImg5 from "@/assets/sri-lanka/srilanka-day11-main-goodbye-group-photo.jpg";
 
 
 

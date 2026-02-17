@@ -9,8 +9,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import FAQs from "./pages/FAQs";
 import TermsConditions from "./pages/TermsConditions";
-import JapanAdventureCardPreview from "./pages/JapanAdventureCardPreview";
-import JapanItinerary from "./pages/JapanItinerary";
+import SrilankaItinerary from "./pages/SrilankaItinerary";
 
 import BookingPage from "./pages/booking/BookingPage";
 import NotFound from "./pages/NotFound";
@@ -29,10 +28,9 @@ const App = () => (
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/terms" element={<TermsConditions />} />
 
-          <Route path="/" element={<JapanItinerary />} />
-          <Route path="/bali-itinerary" element={<JapanAdventureCardPreview />} />
+          <Route path="/" element={<SrilankaItinerary />} />
+          <Route path="/srilanka-itinerary" element={<SrilankaItinerary />} />
           <Route path="/booking/:slug" element={<BookingPage />} />
-          <Route path="/japan-adventure-preview" element={<JapanAdventureCardPreview />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AppRouter>

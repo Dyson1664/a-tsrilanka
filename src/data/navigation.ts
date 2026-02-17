@@ -17,7 +17,6 @@ export interface NavigationDestination {
 // Extract trips data to module level - prevents recreation on every render
 export const NAVIGATION_TRIPS: readonly NavigationTrip[] = [
   { title: "India Journey", duration: "14 Days", location: "India", link: "/india-itinerary" },
-  { title: "Best of Japan", duration: "7 Days", location: "Japan", link: "/japan-itinerary" },
   { title: "Philippines Paradise", duration: "10 Days", location: "Philippines", link: "/philippines-itinerary" },
   { title: "Sri Lanka Explorer", duration: "11 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
   { title: "Colombia Adventure", duration: "7 Days", location: "Colombia", link: "/colombia-itinerary" },
@@ -31,7 +30,6 @@ export const NAVIGATION_DESTINATIONS: readonly NavigationDestination[] = [
   { city: "Thailand", country: "Asia", description: "Temples, beaches & culture", link: "/thailand" },
   { city: "Sri Lanka", country: "Asia", description: "Pearl of the Indian Ocean", link: "/srilanka" },
   { city: "Philippines", country: "Asia", description: "Tropical islands paradise", link: "/philippines" },
-  { city: "Japan", country: "Asia", description: "Ancient traditions & modern cities", link: "/japan" },
   //{ city: "Colombia", country: "South America", description: "Coffee culture & vibrant cities", link: "/colombia" },
   { city: "India", country: "Asia", description: "Rich heritage & diverse culture", link: "/india" },
   //{ city: "Bhutan", country: "Asia", description: "Land of the Thunder Dragon", link: "/bhutan" },

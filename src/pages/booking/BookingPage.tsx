@@ -31,7 +31,7 @@ import { cn } from "@/lib/utils";
 const PAYMENTS_ENABLED = false;
 
 /**
- * ✅ Config by slug: /booking/japan or /booking/colombia
+ * ✅ Config by slug: /booking/colombia
  */
 const BOOKING_CONFIG: Record<
   string,
@@ -42,17 +42,16 @@ const BOOKING_CONFIG: Record<
     shopifyDomain: string;
   }
 > = {
+  "sri-lanka": {
+    countryName: "Sri Lanka",
+    variantId: "00000000000000",
+    requiresPassport: false,
+    shopifyDomain: "tbff.imaginebeyondtravel.com",
+  },
   colombia: {
     countryName: "Colombia",
     variantId: "45199567650995",
     requiresPassport: true,
-    shopifyDomain: "tbff.imaginebeyondtravel.com",
-  },
-
-  japan: {
-    countryName: "Japan",
-    variantId: "45208545362099",
-    requiresPassport: false,
     shopifyDomain: "tbff.imaginebeyondtravel.com",
   },
 

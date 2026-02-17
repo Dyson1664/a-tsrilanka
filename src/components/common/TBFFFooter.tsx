@@ -147,6 +147,14 @@ const TBFFFooter = () => {
               >
                 FAQs
               </Link>
+
+              <Link 
+                to="/srilanka-itinerary" 
+                className="block hover:text-[#fbddda] transition-colors"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Sri Lanka Trip
+              </Link>
               
               <Link 
                 to="/terms" 
