@@ -112,7 +112,7 @@ export const destinationsData: Record<string, DestinationData> = {
         duration: "9 days",
         description: "Experience the pearl of the Indian Ocean with its rich culture, wildlife, and stunning landscapes",
         image: srilankaHeroImage,
-        price: "From $1,449",
+        price: "From $1,399",
         route: "/srilanka-itinerary"
       }
     ],

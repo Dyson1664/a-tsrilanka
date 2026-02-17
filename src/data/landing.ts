@@ -75,7 +75,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     duration: "11 days",
     rating: 4.7,
     reviews: 156,
-    price: "From $1,449",
+    price: "From $1,399",
     image: srilankaDay06,
     tag: "",
     overview:

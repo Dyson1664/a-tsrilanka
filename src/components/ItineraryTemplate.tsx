@@ -1377,7 +1377,7 @@ export const ItineraryTemplate = memo(
                 <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-3 py-2 shadow-lg">
                   <p className="text-sm font-semibold text-white whitespace-nowrap">
                     {data.slug === "india-journey" && "Tour starts Feb 27th"}
-                    {data.slug === "sri-lanka" && "Tour starts April 19th"}
+                    {data.slug === "sri-lanka" && `Tour starts ${data.startDate ?? "May 8th"}`}
                     {data.slug === "philippines" && "Tour starts May 4th"}
                   </p>
                 </div>
@@ -1413,7 +1413,7 @@ export const ItineraryTemplate = memo(
                   <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-3 py-1.5">
                     <p className="text-sm font-semibold text-white">
                       {data.slug === "india-journey" && "Tour starts Feb 27th"}
-                      {data.slug === "sri-lanka" && "Tour starts April 19th"}
+                      {data.slug === "sri-lanka" && `Tour starts ${data.startDate ?? "May 8th"}`}
                       {data.slug === "philippines" && "Tour starts May 4th"}
                     </p>
                   </div>
