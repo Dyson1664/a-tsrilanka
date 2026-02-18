@@ -58,8 +58,8 @@ export const srilankaData = {
   location: "Sri Lanka",
   duration: "11 days",
   heroImage: srilankaDay06,
-  price: "USD $1,399",
-  priceNote: "First 6 bookings, then USD $1,499",
+  price: "USD $1,239",
+  priceNote: "First 6 bookings, then USD $1,339",
   startDate: "May 8th",
   overviewGallery2x: [
     tile1_800_srilanka,

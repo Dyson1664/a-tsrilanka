@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+﻿import { useMemo, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -26,12 +26,12 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils";
 
 /**
- * ✅ Toggle payments (set to true when you’re ready to enable Shopify)
+ * ? Toggle payments (set to true when you�re ready to enable Shopify)
  */
-const PAYMENTS_ENABLED = false;
+const PAYMENTS_ENABLED = true;
 
 /**
- * ✅ Config by slug: /booking/colombia
+ * ? Config by slug: /booking/colombia
  */
 const BOOKING_CONFIG: Record<
   string,
@@ -44,7 +44,7 @@ const BOOKING_CONFIG: Record<
 > = {
   "sri-lanka": {
     countryName: "Sri Lanka",
-    variantId: "00000000000000",
+    variantId: "45281223770291",
     requiresPassport: false,
     shopifyDomain: "tbff.imaginebeyondtravel.com",
   },
@@ -82,20 +82,30 @@ function buildShopifyCartUrl(params: {
 }
 
 /**
- * ✅ Base schema
+ * ? Base schema
  */
 const baseSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
   email: z.string().trim().email("Please enter a valid email address").max(255),
   mobile: z.string().trim().min(1, "Mobile number is required").max(30),
   instagram: z.string().trim().max(50).optional().or(z.literal("")),
+  travelers: z
+    .number({ invalid_type_error: "Number of travelers is required" })
+    .int("Please enter a whole number")
+    .min(1, "Minimum 1 traveler")
+    .max(6, "Maximum 6 travelers"),
+  trainPassportNumber: z
+    .string()
+    .trim()
+    .min(1, "Passport number is required")
+    .max(30),
   termsAccepted: z.literal(true, {
     errorMap: () => ({ message: "You must accept the terms and conditions" }),
   }),
 });
 
 /**
- * ✅ Passport schema used only when requiresPassport=true
+ * ? Passport schema used only when requiresPassport=true
  */
 const passportSchema = z.object({
   passportFirstNameGivenName: z.string().trim().min(1).max(100),
@@ -218,6 +228,8 @@ export default function BookingPage() {
       email: "",
       mobile: "",
       instagram: "",
+      travelers: 1,
+      trainPassportNumber: "",
       termsAccepted: undefined,
 
       passportFirstNameGivenName: "",
@@ -242,7 +254,7 @@ export default function BookingPage() {
               Booking link not found
             </h1>
             <p className="text-muted-foreground mb-6">
-              This booking page isn’t configured yet.
+              This booking page isn�t configured yet.
             </p>
             <Button onClick={() => navigate("/")} className="w-full">
               Go to homepage
@@ -272,6 +284,8 @@ export default function BookingPage() {
       Email: data.email,
       Mobile: data.mobile,
       Instagram: data.instagram?.trim() ? data.instagram.trim() : "Not provided",
+      Travelers: String(data.travelers),
+      "Train Ticket Passport Number": data.trainPassportNumber,
       "Terms Accepted": "Yes",
     };
 
@@ -288,7 +302,7 @@ export default function BookingPage() {
     const checkoutUrl = buildShopifyCartUrl({
       shopifyDomain: config.shopifyDomain,
       variantId: config.variantId,
-      quantity: 1,
+      quantity: data.travelers,
       attributes,
     });
 
@@ -304,17 +318,54 @@ export default function BookingPage() {
       <main className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-lg mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-              Complete Your Booking – {config.countryName}
+            <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-2">
+              Complete Your Booking - {config.countryName}
             </h1>
             <p className="text-muted-foreground">
               Please fill in your details to continue to payment
             </p>
+            <div className="mt-4 rounded-lg border border-primary/20 bg-primary/10 p-4 text-sm text-foreground">
+              <p className="font-semibold">Booking for more than one person?</p>
+              <p className="text-muted-foreground">
+                Please complete only the lead traveler's details during checkout. We'll follow up with you for the remaining traveler details.
+              </p>
+            </div>
           </div>
 
           <div className="bg-card rounded-xl border border-border p-6 sm:p-8 shadow-sm">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                <FormField
+                  control={form.control}
+                  name="travelers"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Number of Travelers (1-6) *</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="number"
+                          min={1}
+                          max={6}
+                          step={1}
+                          placeholder="1"
+                          value={field.value ?? ""}
+                          onChange={(event) => {
+                            const raw = event.target.value;
+                            if (raw === "") {
+                              field.onChange(undefined);
+                              return;
+                            }
+                            const parsed = Number(raw);
+                            field.onChange(Number.isNaN(parsed) ? undefined : parsed);
+                          }}
+                          className="h-11"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
                 <FormField
                   control={form.control}
                   name="fullName"
@@ -370,6 +421,23 @@ export default function BookingPage() {
                     </FormItem>
                   )}
                 />
+                <FormField
+                  control={form.control}
+                  name="trainPassportNumber"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Passport Number (Needed to book your train ticket) *</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Enter passport number"
+                          {...field}
+                          className="h-11"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
                 <FormField
                   control={form.control}
@@ -388,7 +456,6 @@ export default function BookingPage() {
                     </FormItem>
                   )}
                 />
-
                 {config.requiresPassport && (
                   <div className="pt-4 border-t border-border">
                     <h2 className="text-base font-semibold text-foreground mb-2">
@@ -516,7 +583,7 @@ export default function BookingPage() {
 
                 {paymentDisabled ? (
                   <p className="text-xs text-muted-foreground text-center pt-2">
-                    Payments are not enabled yet — check back soon.
+                    Payments are not enabled yet � check back soon.
                   </p>
                 ) : (
                   <p className="text-xs text-muted-foreground text-center pt-2">
@@ -533,3 +600,5 @@ export default function BookingPage() {
     </div>
   );
 }
+
+
