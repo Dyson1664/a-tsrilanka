@@ -26,7 +26,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils";
 
 /**
- * ? Toggle payments (set to true when you�re ready to enable Shopify)
+ * ? Toggle payments (set to true when you?re ready to enable Shopify)
  */
 const PAYMENTS_ENABLED = true;
 
@@ -254,7 +254,7 @@ export default function BookingPage() {
               Booking link not found
             </h1>
             <p className="text-muted-foreground mb-6">
-              This booking page isn�t configured yet.
+              This booking page isn?t configured yet.
             </p>
             <Button onClick={() => navigate("/")} className="w-full">
               Go to homepage
@@ -342,24 +342,20 @@ export default function BookingPage() {
                     <FormItem>
                       <FormLabel>Number of Travelers (1-6) *</FormLabel>
                       <FormControl>
-                        <Input
-                          type="number"
-                          min={1}
-                          max={6}
-                          step={1}
-                          placeholder="1"
-                          value={field.value ?? ""}
-                          onChange={(event) => {
-                            const raw = event.target.value;
-                            if (raw === "") {
-                              field.onChange(undefined);
-                              return;
-                            }
-                            const parsed = Number(raw);
-                            field.onChange(Number.isNaN(parsed) ? undefined : parsed);
-                          }}
-                          className="h-11"
-                        />
+                        <select
+                          value={String(field.value ?? 1)}
+                          onChange={(event) =>
+                            field.onChange(Number(event.target.value))
+                          }
+                          className="h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                        >
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -583,7 +579,7 @@ export default function BookingPage() {
 
                 {paymentDisabled ? (
                   <p className="text-xs text-muted-foreground text-center pt-2">
-                    Payments are not enabled yet � check back soon.
+                    Payments are not enabled yet ? check back soon.
                   </p>
                 ) : (
                   <p className="text-xs text-muted-foreground text-center pt-2">
